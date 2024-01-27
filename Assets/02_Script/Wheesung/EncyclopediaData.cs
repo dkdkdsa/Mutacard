@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct EncyclopediaData
+[CreateAssetMenu(menuName = "SO/Data/EncyclopediaData", fileName = "Data")]
+public class EncyclopediaData : ScriptableObject
 {
-    Sprite sprite;
-    string name;
-    string explanation;
+    public Sprite dataSprite;
+    public string dataName;
+    public string dataExplanation;
 }
