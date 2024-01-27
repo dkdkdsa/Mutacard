@@ -51,12 +51,21 @@ public abstract class Card : MonoBehaviour
         if (isMovement)
         {
 
-            var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pos.z = 0;
-
-            transform.position = pos;
+            transform.position = MousePos();
 
         }
+
+    }
+
+    public Vector3 MousePos()
+    {
+
+        Vector3 mousePosition = Input.mousePosition;
+
+        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+        Physics.Raycast(ray, out var info, 100, LayerMask.GetMask("Ground"));
+
+        return info.point;
 
     }
 

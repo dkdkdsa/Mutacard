@@ -27,21 +27,28 @@ public class CardMargeBox : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter(Collider other)
     {
 
-        if (collision.CompareTag("MargeBox"))
+        if (other.CompareTag("MargeBox"))
         {
 
-            targetCard = collision.transform.GetComponentInParent<Card>();
+            targetCard = other.transform.GetComponentInParent<Card>();
 
         }
-        else
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.CompareTag("MargeBox"))
         {
 
             targetCard = null;
 
         }
+
 
     }
 
