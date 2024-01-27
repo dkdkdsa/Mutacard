@@ -25,7 +25,7 @@ public class EncyclopediaSystem : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        Instance = this; //어짜피 한개의 씬에만 있을놈
 
         dataExitBtn.onClick.AddListener(PopdownDataPanel);
     }
