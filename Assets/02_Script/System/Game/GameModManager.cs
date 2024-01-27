@@ -28,8 +28,10 @@ public class GameModManager : MonoBehaviour
 
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+
+        yield return new WaitForSeconds(1);
 
         OnGameStarted?.Invoke(currentMod);
 

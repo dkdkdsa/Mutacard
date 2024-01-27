@@ -24,6 +24,8 @@ public class CardManager : MonoBehaviour
 
     public static CardManager Instance;
 
+    public event Action<int> OnCardMarged;
+
     private void Awake()
     {
         
@@ -60,6 +62,7 @@ public class CardManager : MonoBehaviour
         {
 
             Instantiate(data.cardPrefab, pos, Quaternion.identity);
+            OnCardMarged?.Invoke(data.cardPrefab.data.rank);
 
         }
         else
@@ -68,6 +71,8 @@ public class CardManager : MonoBehaviour
             int idx = Random.Range(0, data.mutationCards.Count);
 
             Instantiate(data.mutationCards[idx], pos, Quaternion.identity);
+
+            OnCardMarged?.Invoke(data.mutationCards[idx].data.rank);
 
         }
 
