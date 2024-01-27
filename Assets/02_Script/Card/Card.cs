@@ -11,31 +11,25 @@ public enum CardType
 
 }
 
-[Serializable]
-public class CardMargeData
-{
-
-    public CardDataSO targetData;
-    public Card cardPrefab;
-
-}
-
 public abstract class Card : MonoBehaviour
 {
 
     [SerializeField] private LanguageType debugView;
-    [SerializeField] private List<CardMargeData> margeDatas;
 
     [field:SerializeField] public CardDataSO data { get; private set; }
 
+    public bool isMovement { get; protected set; }
+
     protected SpriteRenderer iconRenderer;
     protected TMP_Text nameText;
+    protected CardMargeBox margeBox;
 
     private void Awake()
     {
         
         nameText = transform.Find("NameText").GetComponent<TMP_Text>();
         iconRenderer = transform.Find("Icon").GetComponent<SpriteRenderer>();
+        margeBox = GetComponentInChildren<CardMargeBox>();
 
         HandleLanguageChange();
 
@@ -51,10 +45,40 @@ public abstract class Card : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+
+        if (isMovement)
+        {
+
+            var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos.z = 0;
+
+            transform.position = pos;
+
+        }
+
+    }
+
     private void OnDestroy()
     {
 
         LanguageManager.OnLanguageChangeEvent -= HandleLanguageChange;
+
+    }
+
+    private void OnMouseDown()
+    {
+
+        isMovement = true;
+
+    }
+
+    private void OnMouseUp()
+    {
+        
+        isMovement = false;
+        margeBox.CheckMarge();
 
     }
 
@@ -68,6 +92,13 @@ public abstract class Card : MonoBehaviour
 
         transform.Find("NameText").GetComponent<TMP_Text>().text = data.cardName[debugView];
         transform.Find("Icon").GetComponent<SpriteRenderer>().sprite =data.icon;
+        GetComponent<SpriteRenderer>().color = data.cardType switch
+        {
+
+            CardType.Item => new Color32(180, 180, 180, 255),
+            _ => Color.white,
+
+        };
 
     }
 

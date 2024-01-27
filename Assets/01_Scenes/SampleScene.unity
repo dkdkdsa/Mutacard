@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 999166006}
   - component: {fileID: 999166005}
   - component: {fileID: 999166007}
+  - component: {fileID: 999166008}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -514,7 +515,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 631deac05d8562c4990d5558b6cc9db5, type: 3}
-  m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+  m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -586,6 +587,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3080808, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &999166008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999166004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4f662a7ea8d194bab985eed156789d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugView: 0
+  <data>k__BackingField: {fileID: 0}
 --- !u!1 &1930142296
 GameObject:
   m_ObjectHideFlags: 0
