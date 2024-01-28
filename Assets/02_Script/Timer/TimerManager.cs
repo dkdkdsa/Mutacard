@@ -62,7 +62,14 @@ public class TimerManager : MonoBehaviour
 
             currentTime -= Time.deltaTime;
             totalTime += Time.deltaTime;
-            ScoreManager.Instance.Score = (ulong)totalTime;
+
+            if(GameModManager.Instance.cMod == GameMods.Time)
+            {
+
+                ScoreManager.Instance.Score = (ulong)totalTime;
+
+            }
+
             OnTimeChangedEvent?.Invoke(currentTime);
 
         }

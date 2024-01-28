@@ -18,6 +18,7 @@ public class GameModManager : MonoBehaviour
     [SerializeField] private GameMods currentMod;
 
     public static GameModManager Instance;
+    public GameMods cMod => currentMod;
 
     public event Action<GameMods> OnGameStarted;
 

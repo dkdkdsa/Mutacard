@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166cf11f92ea73c42bf7a6bf14188170, type: 3}
+  m_Name: CowCard
+  m_EditorClassIdentifier: 
+  <cardName>k__BackingField:
+    languageDatas:
+    - Type: 0
+      Text: "\uC18C"
+    - Type: 1
+      Text: Cow
+  <cardType>k__BackingField: 3
+  <rank>k__BackingField: 1
+  <icon>k__BackingField: {fileID: 21300000, guid: 1fc3f7b348c8e6d4a9661899153244c6, type: 3}
+  <cardExplanation>k__BackingField:
+    languageDatas:
+    - Type: 0
+      Text: "\uC74C\uBA38~~"
+    - Type: 1
+      Text: Moo~~

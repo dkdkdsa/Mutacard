@@ -32,4 +32,18 @@ public class LanguageData
 
     }
 
+    public void AddText (LanguageType type, string text)
+    {
+
+        if(languageDatas == null)
+        {
+
+            languageDatas = new();
+
+        }
+
+        languageDatas.Add(new LanguageObject {  Type = type, Text = text });
+
+    }
+
 }

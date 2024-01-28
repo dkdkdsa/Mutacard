@@ -10,12 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 166cf11f92ea73c42bf7a6bf14188170, type: 3}
-  m_Name: FireCArd
+  m_Name: FireCard
   m_EditorClassIdentifier: 
   <cardName>k__BackingField:
-    languageDatas: []
-  <cardType>k__BackingField: 0
-  <rank>k__BackingField: 0
-  <icon>k__BackingField: {fileID: 0}
+    languageDatas:
+    - Type: 0
+      Text: "\uBD88"
+    - Type: 1
+      Text: Fire
+  <cardType>k__BackingField: 2
+  <rank>k__BackingField: 1
+  <icon>k__BackingField: {fileID: 21300000, guid: 90ea85d9047710341974d77d18bdf082, type: 3}
   <cardExplanation>k__BackingField:
-    languageDatas: []
+    languageDatas:
+    - Type: 0
+      Text: "\uB728\uAC70\uC6CC\uC694!"
+    - Type: 1
+      Text: It's hot!

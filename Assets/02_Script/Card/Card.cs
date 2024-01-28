@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public enum CardType
 {
@@ -23,16 +24,22 @@ public abstract class Card : MonoBehaviour
 
     public bool isMovement { get; protected set; }
 
+    protected SpriteRenderer mainRanerer;
     protected SpriteRenderer iconRenderer;
     protected TMP_Text nameText;
     protected CardMargeBox margeBox;
+    protected Collider col;
+    protected SortingGroup group;
 
     private void Awake()
     {
         
+        mainRanerer = GetComponent<SpriteRenderer>();
         nameText = transform.Find("NameText").GetComponent<TMP_Text>();
         iconRenderer = transform.Find("Icon").GetComponent<SpriteRenderer>();
         margeBox = GetComponentInChildren<CardMargeBox>();
+        col = GetComponent<Collider>();
+        group = GetComponent<SortingGroup>();
 
         HandleLanguageChange();
 
@@ -58,6 +65,8 @@ public abstract class Card : MonoBehaviour
 
         }
 
+        group.sortingOrder = (int)(transform.position.y * 10);
+
     }
 
     public Vector3 MousePos()
@@ -79,10 +88,26 @@ public abstract class Card : MonoBehaviour
 
     }
 
+    private void OnMouseEnter()
+    {
+
+        mainRanerer.material.SetFloat("_InnerOutlineFade", 1);
+
+    }
+
+    private void OnMouseExit()
+    {
+
+
+        mainRanerer.material.SetFloat("_InnerOutlineFade", 0);
+
+    }
+
     private void OnMouseDown()
     {
 
         isMovement = true;
+        col.enabled = false;
 
     }
 
@@ -91,6 +116,7 @@ public abstract class Card : MonoBehaviour
         
         isMovement = false;
         margeBox.CheckMarge();
+        col.enabled = true;
 
     }
 
@@ -102,6 +128,7 @@ public abstract class Card : MonoBehaviour
 
         if (data == null) return;
 
+        gameObject.name = data.name;
         transform.Find("NameText").GetComponent<TMP_Text>().text = data.cardName[debugView];
         transform.Find("Icon").GetComponent<SpriteRenderer>().sprite =data.icon;
         GetComponent<SpriteRenderer>().color = data.cardType switch

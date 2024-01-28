@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7615403192004654770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3956919238146815461}
+  - component: {fileID: 674581049310201308}
+  m_Layer: 0
+  m_Name: CardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3956919238146815461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615403192004654770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674581049310201308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615403192004654770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b882740da6be742a81d224a1d9e608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  margeDatas:
+  - targetA: {fileID: 11400000, guid: ace3d92f86b506644974e44833b9ad39, type: 2}
+    targetB: {fileID: 11400000, guid: be2169593833fa04fae17963b2e4f9ef, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 6472369913359892257, guid: b7aa5523264d80140bff8adf759d41d8, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 1331e44e0aa51234ca8c42e0ce13367a, type: 2}
+    targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 0
+    cardPrefab: {fileID: 1422421535482968520, guid: 5bd0852b09107fe47890781518cafae9, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 86b16ca478fb2bd4487ae05aa52038d3, type: 2}
+    targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 0
+    cardPrefab: {fileID: 1422421535482968520, guid: 5bd0852b09107fe47890781518cafae9, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 15f4edfee297da04a9460e8cbcf72925, type: 2}
+    targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 0
+    cardPrefab: {fileID: 1422421535482968520, guid: 5bd0852b09107fe47890781518cafae9, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: d9cd26f603967e34f93cbd5b68d18c30, type: 2}
+    targetB: {fileID: 11400000, guid: 667cdf8d2ccabf44f99876858c0e8d93, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 4155010730689162616, guid: 6eeaf952812b39a4b99c6534c65b5e18, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 956dd96bacafa284ebe2dc7284db279c, type: 2}
+    targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 1
+    cardPrefab: {fileID: 1698408196571700037, guid: 4291e65a6001d72418865b1f86ae546e, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 7a1e8d98ef72b1140826d731404643eb, type: 2}
+    targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 1
+    cardPrefab: {fileID: 6375376750530519742, guid: 8d4d999bbeae7324a8e6ccbae4434d5e, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: a7e0ac9fd1c0e2d4eb4b70ca148e5804, type: 2}
+    targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 1
+    cardPrefab: {fileID: 6664878558434302339, guid: 070a487eaf4f2344b930cb4dafde6c4d, type: 3}
+    mutationCards: []
