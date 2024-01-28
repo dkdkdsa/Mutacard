@@ -20,8 +20,22 @@ public class MoneyUI : MonoBehaviour
 
     private void Update()
     {
+        string timeValueText = $"{MoneyManager.instance.money}";
 
-        moneyText.text = $"{data.Text} : {MoneyManager.instance.money}";
+        if (50 < MoneyManager.instance.money && MoneyManager.instance.money <= 100)
+        {
+            timeValueText = $"<color=yellow>{timeValueText}</color>";
+        }
+        else if (0 < MoneyManager.instance.money && MoneyManager.instance.money <= 50)
+        {
+            timeValueText = $"<color=grey>{timeValueText}</color>";
+        }
+        else
+        {
+            timeValueText = $"<color=black>{timeValueText}</color>";
+        }
+
+        moneyText.text = $"{data.Text} : {timeValueText}";
 
     }
 
