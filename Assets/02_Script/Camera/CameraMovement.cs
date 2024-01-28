@@ -5,13 +5,18 @@ using Cinemachine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    [Header("Move")]
+    [SerializeField] private float panSpeed = 20f;
+    [SerializeField] private float panBorderThickness = 10f;
+    [SerializeField] private float minX = -10f;
+    [SerializeField] private float maxX = 10f;
+    [SerializeField] private float minY = -10f;
+    [SerializeField] private float maxY = 10f;
+
+    [Header("Zoom")]
     [SerializeField] private float wheelSpeed;
     [SerializeField] private float maxSize;
     [SerializeField] private float minSize;
-
-    [SerializeField] private float panSpeed = 20f;
-    [SerializeField] private float panBorderThickness = 10f;
 
     private CinemachineVirtualCamera vcam;
     private Rigidbody2D rb;
@@ -30,27 +35,27 @@ public class CameraMovement : MonoBehaviour
 
     private void CameraMove()
     {
-        //Vector2 inputAxis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        //rb.velocity = inputAxis * moveSpeed;
-
         Vector3 pos = transform.position;
 
+        //위쪽
         if (Input.mousePosition.y >= Screen.height - panBorderThickness)
-        {
-            pos.y += panSpeed * Time.deltaTime; // Move forward
-        }
+            pos.y += panSpeed * Time.deltaTime;
+
+        //아래쪽
         if (Input.mousePosition.y <= panBorderThickness)
-        {
-            pos.y -= panSpeed * Time.deltaTime; // Move backward
-        }
+            pos.y -= panSpeed * Time.deltaTime;
+
+        //오른쪽
         if (Input.mousePosition.x >= Screen.width - panBorderThickness)
-        {
-            pos.x += panSpeed * Time.deltaTime; // Move right
-        }
+            pos.x += panSpeed * Time.deltaTime;
+
+        //왼쪽
         if (Input.mousePosition.x <= panBorderThickness)
-        {
-            pos.x -= panSpeed * Time.deltaTime; // Move left
-        }
+            pos.x -= panSpeed * Time.deltaTime;
+
+        //최대, 최소
+        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         transform.position = pos;
     }
