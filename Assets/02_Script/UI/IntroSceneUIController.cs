@@ -114,9 +114,46 @@ public class IntroSceneUIController : MonoBehaviour
 
     }
 
+    private class BookUIController : UIController
+    {
+
+        private Transform rootTrm;
+
+        public BookUIController(Transform rootTrm)
+        {
+
+            this.rootTrm = rootTrm;
+
+        }
+
+        public override void Controll()
+        {
+
+            if (isControl) return;
+
+            isControl = true;
+
+            rootTrm.DOLocalMoveX(0, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+
+        }
+
+        public override void Release()
+        {
+
+            if (isControl) return;
+
+            isControl = true;
+
+            rootTrm.DOLocalMoveX(800, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+
+        }
+
+    }
+
     [SerializeField] private Transform modeSelectUI;
     [SerializeField] private Transform rankingUI;
     [SerializeField] private Transform settingUI;
+    [SerializeField] private Transform bookUI;
     [SerializeField] private TMP_Text languageText;
     [Header("-rankings-")]
     [SerializeField] private Transform rankingParent;
@@ -125,6 +162,7 @@ public class IntroSceneUIController : MonoBehaviour
     private ModeSelectUIControll modeSelectUIController;
     private RankingUIController rankingUIController;
     private SettingUIController settingUIController;
+    private BookUIController bookUIController;
     private List<UIController> controllerLs = new();
 
     private LanguageType current;
@@ -137,10 +175,12 @@ public class IntroSceneUIController : MonoBehaviour
         modeSelectUIController = new(modeSelectUI);
         rankingUIController = new(rankingUI);
         settingUIController = new(settingUI);
+        bookUIController = new(bookUI);
 
         controllerLs.Add(modeSelectUIController);
         controllerLs.Add(rankingUIController);
         controllerLs.Add(settingUIController);
+        controllerLs.Add(bookUIController);
 
         LootLockerController.Init((x) =>
         {
@@ -177,6 +217,14 @@ public class IntroSceneUIController : MonoBehaviour
 
         settingUIController.Controll();
         Release(settingUIController);
+
+    }
+
+    public void StartBookControl()
+    {
+
+        bookUIController.Controll();
+        Release(bookUIController);
 
     }
 

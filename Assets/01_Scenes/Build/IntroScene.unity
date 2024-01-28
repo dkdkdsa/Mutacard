@@ -180,8 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uCE74\uB4DC\uB97C \uD569\uCCD0 \uC81C\uD55C\uC2DC\uAC04 \uB0B4\n\uAC00\uC7A5
-    \uB192\uC740 \uC810\uC218\uB97C \uC5BB\uC73C\uC138\uC694"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 909f8e578be6a0b4c99c997ca83bb42c, type: 2}
   m_sharedMaterial: {fileID: -7806389729288156113, guid: 909f8e578be6a0b4c99c997ca83bb42c, type: 2}
@@ -340,7 +339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 66503472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024471138}
+        m_TargetAssemblyTypeName: IntroSceneUIController, Assembly-CSharp
+        m_MethodName: StartSettingControl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &66503472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,6 +1030,7 @@ GameObject:
   - component: {fileID: 346369686}
   - component: {fileID: 346369685}
   - component: {fileID: 346369684}
+  - component: {fileID: 346369687}
   m_Layer: 5
   m_Name: TimeModeBtn
   m_TagString: Untagged
@@ -1128,6 +1140,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346369682}
   m_CullTransparentMesh: 1
+--- !u!114 &346369687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346369682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b78d71795d316c4994020f8ba31575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 14423505}
+  explainText:
+    languageDatas:
+    - Type: 0
+      Text: "\uCD5C\uB300\uD55C \uC624\uB798 \uC0B4\uC544\uB0A8\uC73C\uC138\uC694!"
+    - Type: 1
+      Text: "Survive as long as possible!\r"
 --- !u!1 &379603047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1291,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379603047}
+  m_CullTransparentMesh: 1
+--- !u!1 &381365717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381365718}
+  - component: {fileID: 381365720}
+  - component: {fileID: 381365719}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &381365718
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381365717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 999614443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 576, y: -105}
+  m_SizeDelta: {x: 700, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &381365719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381365717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d8671b0e7db39a9438f85ffe550f69b8, type: 3}
+  m_Type: 2
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 0.5
+--- !u!222 &381365720
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381365717}
   m_CullTransparentMesh: 1
 --- !u!1 &408739185
 GameObject:
@@ -1440,6 +1546,7 @@ RectTransform:
   - {fileID: 1043217696}
   - {fileID: 916188025}
   - {fileID: 1995840845}
+  - {fileID: 999614443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2037,6 +2144,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961056189}
   m_CullTransparentMesh: 1
+--- !u!1 &999614442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999614443}
+  m_Layer: 5
+  m_Name: BookUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &999614443
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999614442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 381365718}
+  m_Father: {fileID: 534337402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 800, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1043217695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +3025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1241686529}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024471138}
+        m_TargetAssemblyTypeName: IntroSceneUIController, Assembly-CSharp
+        m_MethodName: StartBookControl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1241686529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3903,6 +4058,7 @@ GameObject:
   - component: {fileID: 1827572591}
   - component: {fileID: 1827572590}
   - component: {fileID: 1827572589}
+  - component: {fileID: 1827572592}
   m_Layer: 5
   m_Name: ScoreModeBtn
   m_TagString: Untagged
@@ -4012,6 +4168,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827572587}
   m_CullTransparentMesh: 1
+--- !u!114 &1827572592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827572587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b78d71795d316c4994020f8ba31575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 14423505}
+  explainText:
+    languageDatas:
+    - Type: 0
+      Text: "\uB192\uC740 \uC810\uC218\uB97C \uC5BB\uC73C\uC138\uC694!"
+    - Type: 1
+      Text: Get a high score!
 --- !u!1 &1863775190
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,7 +4528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 800, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1996028654
@@ -4368,6 +4543,7 @@ GameObject:
   - component: {fileID: 1996028658}
   - component: {fileID: 1996028657}
   - component: {fileID: 1996028656}
+  - component: {fileID: 1996028659}
   m_Layer: 5
   m_Name: InfModeBtn
   m_TagString: Untagged
@@ -4477,6 +4653,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996028654}
   m_CullTransparentMesh: 1
+--- !u!114 &1996028659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996028654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b78d71795d316c4994020f8ba31575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 14423505}
+  explainText:
+    languageDatas:
+    - Type: 0
+      Text: "\uC790\uC720\uB86D\uAC8C \uC990\uACA8\uBCF4\uC138\uC694!"
+    - Type: 1
+      Text: Enjoy freely!
 --- !u!1 &2002927628
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,6 +4739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modeSelectUI: {fileID: 1043217696}
   rankingUI: {fileID: 916188025}
+  settingUI: {fileID: 1995840845}
+  bookUI: {fileID: 0}
   languageText: {fileID: 1180817934}
   rankingParent: {fileID: 1340134153}
   panelPrefab: {fileID: 7881395622326089968, guid: b4ee51f5fcd8b484ab4f275ebcce6b03, type: 3}

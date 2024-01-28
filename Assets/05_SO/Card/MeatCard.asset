@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166cf11f92ea73c42bf7a6bf14188170, type: 3}
+  m_Name: MeatCard
+  m_EditorClassIdentifier: 
+  <cardName>k__BackingField:
+    languageDatas:
+    - Type: 0
+      Text: "\uC0DD\uACE0\uAE30"
+    - Type: 1
+      Text: Meat
+  <cardType>k__BackingField: 0
+  <rank>k__BackingField: 1
+  <icon>k__BackingField: {fileID: 21300000, guid: f871ca0d9fcc34a49b31fd5ee91d27be, type: 3}
+  <cardExplanation>k__BackingField:
+    languageDatas:
+    - Type: 0
+      Text: "\uBA39\uC9C0 \uB9C8\uC138\uC694!"
+    - Type: 1
+      Text: Don't eat it!
