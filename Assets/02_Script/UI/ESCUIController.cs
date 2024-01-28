@@ -121,15 +121,11 @@ public class ESCUIController : MonoBehaviour
     }
 
     [SerializeField] private Transform escPanel;
-    [SerializeField] private Transform settingUI;
-    [SerializeField] private Transform bookUI;
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject exitPanel;
     [SerializeField] private Image blackPanel;
     [SerializeField] private TextMeshProUGUI pause;
 
-    private SettingUIController settingUIController;
-    private BookUIController bookUIController;
     private MainMenuUIController mainMenuUIController;
     private ExitUIController exitUIController;
     private List<UIController> controllerLs = new();
@@ -138,13 +134,9 @@ public class ESCUIController : MonoBehaviour
 
     private void Awake()
     {
-        settingUIController = new(settingUI);
-        bookUIController = new(bookUI);
         mainMenuUIController = new(mainMenuPanel);
         exitUIController = new(exitPanel);
 
-        controllerLs.Add(settingUIController);
-        controllerLs.Add(bookUIController);
         controllerLs.Add(mainMenuUIController);
         controllerLs.Add(exitUIController);
     }
@@ -185,22 +177,9 @@ public class ESCUIController : MonoBehaviour
     {
         FadeESC(false);
         escPanel.DOLocalMoveX(-550, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isEsc = false).SetUpdate(true);
-    }
 
-    public void StartSettingControl()
-    {
-
-        settingUIController.Controll();
-        Release(settingUIController);
-
-    }
-
-    public void StartBookControl()
-    {
-
-        bookUIController.Controll();
-        Release(bookUIController);
-
+        NoMainMenu();
+        NoExit();
     }
 
     #region MainMenuButton
