@@ -2725,14 +2725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b882740da6be742a81d224a1d9e608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  margeDatas:
-  - targetA: {fileID: 11400000, guid: 92f40290c6aa705459b039819acdf802, type: 2}
-    targetB: {fileID: 11400000, guid: 92f40290c6aa705459b039819acdf802, type: 2}
-    destroyAbleA: 1
-    destroyAbleB: 1
-    cardPrefab: {fileID: 6477290866182217544, guid: f35ea65d2d104594bab261f786353966, type: 3}
-    mutationCards:
-    - {fileID: 421284275093459544, guid: 76a1b8010e0b34e4e8d273bb857e2555, type: 3}
+  margeDatas: []
 --- !u!1 &2036811511
 GameObject:
   m_ObjectHideFlags: 0

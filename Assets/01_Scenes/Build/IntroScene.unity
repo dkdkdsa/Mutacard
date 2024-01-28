@@ -4740,7 +4740,7 @@ MonoBehaviour:
   modeSelectUI: {fileID: 1043217696}
   rankingUI: {fileID: 916188025}
   settingUI: {fileID: 1995840845}
-  bookUI: {fileID: 0}
+  bookUI: {fileID: 999614443}
   languageText: {fileID: 1180817934}
   rankingParent: {fileID: 1340134153}
   panelPrefab: {fileID: 7881395622326089968, guid: b4ee51f5fcd8b484ab4f275ebcce6b03, type: 3}
