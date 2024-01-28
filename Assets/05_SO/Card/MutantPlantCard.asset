@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166cf11f92ea73c42bf7a6bf14188170, type: 3}
+  m_Name: MutantPlantCard
+  m_EditorClassIdentifier: 
+  <cardName>k__BackingField:
+    languageDatas:
+    - Type: 0
+      Text: "\uBCC0\uC774 \uC2DD\uBB3C"
+    - Type: 1
+      Text: "Mutant \nPlant"
+  <cardType>k__BackingField: 1
+  <rank>k__BackingField: 5
+  <icon>k__BackingField: {fileID: 21300000, guid: 3b665e0bd2719a240af3cb067df2120d, type: 3}
+  <cardExplanation>k__BackingField:
+    languageDatas:
+    - Type: 0
+      Text: 
+    - Type: 1
+      Text: 
