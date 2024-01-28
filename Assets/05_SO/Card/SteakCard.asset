@@ -16,7 +16,7 @@ MonoBehaviour:
     languageDatas:
     - Type: 0
       Text: "\uC2A4\uD14C\uC774\uD06C"
-    - Type: 0
+    - Type: 1
       Text: Steak
   <cardType>k__BackingField: 0
   <rank>k__BackingField: 2
@@ -25,5 +25,5 @@ MonoBehaviour:
     languageDatas:
     - Type: 0
       Text: "\uC73C\uC74C!"
-    - Type: 0
+    - Type: 1
       Text: Ummm!

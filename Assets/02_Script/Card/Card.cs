@@ -8,6 +8,9 @@ public enum CardType
 {
 
     Item,
+    Production,
+    Environment,
+    Biology
 
 }
 
@@ -105,6 +108,9 @@ public abstract class Card : MonoBehaviour
         {
 
             CardType.Item => new Color32(180, 180, 180, 255),
+            CardType.Production => new Color32(192, 255, 175, 255),
+            CardType.Environment => new Color32(144, 212, 255, 255),
+            CardType.Biology => new Color32(255, 234, 165, 255),
             _ => Color.white,
 
         };
