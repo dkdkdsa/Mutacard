@@ -7,58 +7,85 @@ using UnityEngine.Events;
 
 public class TimerManager : MonoBehaviour
 {
-    [SerializeField] private float MaxTimer;
-    private float Timer;
-    [SerializeField] private float PlusTime;
-    [SerializeField] private float PlusTimeCount;
 
-    public UnityEvent OverEvenet;
+    [SerializeField] private float timeLimit;
 
-    [SerializeField] private TextMeshProUGUI TimerText;
-    [SerializeField] private TextMeshProUGUI PlusTimerText;
-    [SerializeField] private GameObject PlusTimerGameo;
-    // Start is called before the first frame update
-    void Start()
+    private float currentTime;
+    private float totalTime;
+    private bool gameStrarted;
+
+    public event Action<float> OnTimeChangedEvent;
+    public event Action<float> OnTimeOutEvent;
+    public event Action<float> OnTimeAddEvent;
+    public static TimerManager Instance;
+
+    private void Awake()
     {
-        Timer = MaxTimer;
-        TimerText = GetComponent<TextMeshProUGUI>();
+
+        Instance = this;
+        currentTime = timeLimit;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        TimerText.text = Timer.ToString("0.##");
-        if (Timer > 0 )
+
+        GameModManager.Instance.OnGameStarted += HandleGameStarted;
+
+    }
+
+    private void HandleGameStarted(GameMods mod)
+    {
+
+        gameStrarted = true;
+        if(mod == GameMods.Time)
         {
-            
-            Timer -= Time.deltaTime;
+
+            CardManager.Instance.OnCardMarged += HandleCardMarged;
+
         }
-        else if(Timer <= 0)
+
+    }
+
+    private void HandleCardMarged(int rank)
+    {
+
+        AddTime(rank * 1.5f);
+
+    }
+
+    private void Update()
+    {
+
+        if (gameStrarted)
         {
-            if(PlusTimeCount > 0)
-            {
-                StartCoroutine(ShowplustTime());
-                PlusTimeCount--;
-                Timer += PlusTime;
-            }
-            else
-            {
-                OverEvenet.Invoke();
-            }
+
+            currentTime -= Time.deltaTime;
+            totalTime += Time.deltaTime;
+            ScoreManager.Instance.Score = (ulong)totalTime;
+            OnTimeChangedEvent?.Invoke(currentTime);
+
         }
+
+        if(currentTime <= 0 && gameStrarted)
+        {
+
+            gameStrarted = false;
+            OnTimeOutEvent?.Invoke(totalTime);
+
+        }
+
     }
 
-    private IEnumerator ShowplustTime()
+    public void AddTime(float time)
     {
-        PlusTimerGameo.SetActive(true);
-        PlusTimerText = GameObject.Find("PlusTime").GetComponent<TextMeshProUGUI>();
-        PlusTimerText.text = "+" + PlusTime.ToString();
-        yield return new WaitForSeconds(1.5f);
-        Destroy(PlusTimerGameo);
+
+        if (!gameStrarted) return;
+
+        OnTimeAddEvent?.Invoke(time);
+
+        currentTime += time;
+
     }
 
-    public void Test()
-    {
-        Debug.Log("ตส");
-    }
 }
