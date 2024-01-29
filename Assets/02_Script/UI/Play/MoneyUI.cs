@@ -27,7 +27,7 @@ public class MoneyUI : MonoBehaviour
     private void Update()
     {
 
-        moneyText.text = $"{data.Text} : {MoneyManager.instance.money}";
+        moneyText.text = $"{MoneyManager.instance.money}";
 
     }
 

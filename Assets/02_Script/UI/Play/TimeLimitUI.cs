@@ -33,7 +33,7 @@ public class TimeLimitUI : MonoBehaviour
     private void HandleTimeChanged(float obj)
     {
 
-        timeText.text = $"{data.Text} : {(float)Math.Round(obj, 2)}";
+        timeText.text = $"{(float)Math.Round(obj, 2)}";
 
     }
 

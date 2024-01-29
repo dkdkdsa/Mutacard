@@ -25,7 +25,7 @@ public class LastScoreUI : MonoBehaviour
     {
 
         gameoverPanel.SetActive(true);
-        text.text = $"{data.Text} : {ScoreManager.Instance.Score}";
+        text.text = $"{ScoreManager.Instance.Score}";
         menuBtn.onClick.AddListener(GotoMenuScene);
 
         Time.timeScale = 0;

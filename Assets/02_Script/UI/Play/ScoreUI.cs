@@ -30,7 +30,7 @@ public class ScoreUI : MonoBehaviour
     private void Update()
     {
 
-        scoreText.text = $"{data.Text} : {ScoreManager.Instance.Score}";
+        scoreText.text = $"{ScoreManager.Instance.Score}";
 
     }
 
