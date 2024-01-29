@@ -115,7 +115,6 @@ public class ScoreManager : MonoBehaviour
     {
 
         this.score += (ulong)score;
-
         OnScoreAdded?.Invoke(score);
 
     }
