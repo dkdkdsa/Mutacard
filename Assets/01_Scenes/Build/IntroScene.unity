@@ -9097,7 +9097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &157928138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -108520,6 +108520,7 @@ MonoBehaviour:
   namePanel: {fileID: 157928137}
   rankingParent: {fileID: 1340134153}
   panelPrefab: {fileID: 7881395622326089968, guid: b4ee51f5fcd8b484ab4f275ebcce6b03, type: 3}
+  debug: 0
   endValue: -424
   duration: 0.1
   waitTime: 0.5

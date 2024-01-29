@@ -219,6 +219,7 @@ public class IntroSceneUIController : MonoBehaviour
     [Header("-rankings-")]
     [SerializeField] private Transform rankingParent;
     [SerializeField] private RankingPanel panelPrefab;
+    [SerializeField] private bool debug;
 
     [Header("Title")]
     [SerializeField] private float endValue;
@@ -240,6 +241,13 @@ public class IntroSceneUIController : MonoBehaviour
 
     private void Awake()
     {
+
+        if (debug)
+        {
+
+            PlayerPrefs.DeleteAll();
+
+        }
 
         current = LanguageManager.CurrentLanguageType;
 
@@ -450,8 +458,7 @@ public class IntroSceneUIController : MonoBehaviour
 
     private void AudioLoad()
     {
-        float soundValue = PlayerPrefs.GetFloat("SoundValue");
-        if (soundValue == 0.0f) soundValue = 1;
+        float soundValue = PlayerPrefs.GetFloat("SoundValue", 1);
 
         sounudSlider.value = soundValue;
 

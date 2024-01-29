@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf0b7604d7bd89408d1d68e97838aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyText: {fileID: 0}
+  moneyText: {fileID: 1418169796}
 --- !u!4 &814597354
 Transform:
   m_ObjectHideFlags: 0
@@ -891,6 +891,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2397757213838340399, guid: 4217705a50a58ff4c958561f9996ac0e, type: 3}
   m_PrefabInstance: {fileID: 1418169794}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1418169796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7428006061978005358, guid: 4217705a50a58ff4c958561f9996ac0e, type: 3}
+  m_PrefabInstance: {fileID: 1418169794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1735614936
 GameObject:
   m_ObjectHideFlags: 0
