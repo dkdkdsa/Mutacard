@@ -190,6 +190,9 @@ public class IntroSceneUIController : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private float waitTime;
 
+    [Header("Other")]
+    [SerializeField] private Slider sounudSlider;
+
     private ModeSelectUIControll modeSelectUIController;
     private RankingUIController rankingUIController;
     private SettingUIController settingUIController;
@@ -382,6 +385,8 @@ public class IntroSceneUIController : MonoBehaviour
     {
         float soundValue = PlayerPrefs.GetFloat("SoundValue");
         if (soundValue == 0.0f) soundValue = 1;
+
+        sounudSlider.value = soundValue;
 
         AudioManager.Instance.SetBgmVolume(soundValue);
         AudioManager.Instance.SetSfxVolume(soundValue);
