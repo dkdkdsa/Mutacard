@@ -23,4 +23,11 @@ public class FieldManager : MonoBehaviour
 
     }
 
+    public void SetProb(float prob)
+    {
+
+        mutationProbability = prob;
+
+    }
+
 }

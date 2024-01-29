@@ -27,5 +27,5 @@ MonoBehaviour:
   userUrl: https://api.lootlocker.io/game
   baseUrl: https://api.lootlocker.io
   clientSideRequestTimeOut: 5
-  currentDebugLevel: 3
+  currentDebugLevel: 0
   allowTokenRefresh: 1

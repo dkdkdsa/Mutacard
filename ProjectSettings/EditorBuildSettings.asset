@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/01_Scenes/Tutorial.unity
+    guid: 0aeb67216f33adb408679de76ee40646
+  - enabled: 1
+    path: Assets/01_Scenes/Build/InfMode.unity
+    guid: f4d3f5eb28c239f4482e27b3365953a8
+  - enabled: 1
+    path: Assets/01_Scenes/Build/IntroScene.unity
+    guid: 24d6621c582168c4e945973a4b9408fa
+  - enabled: 1
+    path: Assets/01_Scenes/Build/ScoreMode.unity
+    guid: 1e6d5fdbe25f016488f9fe28d3430787
+  - enabled: 1
+    path: Assets/01_Scenes/Build/TimeMode.unity
+    guid: 3f590a89244844c4983324baadd6aab6
   m_configObjects: {}
