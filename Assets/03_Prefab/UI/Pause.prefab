@@ -470,7 +470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7034754184776447644}
         m_TargetAssemblyTypeName: ESCUIController, Assembly-CSharp
         m_MethodName: YesMainMenu
         m_Mode: 1
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7034754184776447644}
         m_TargetAssemblyTypeName: ESCUIController, Assembly-CSharp
         m_MethodName: StartMainMenuControl
         m_Mode: 1
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7034754184776447644}
         m_TargetAssemblyTypeName: ESCUIController, Assembly-CSharp
         m_MethodName: NoExit
         m_Mode: 1
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7034754184776447644}
         m_TargetAssemblyTypeName: ESCUIController, Assembly-CSharp
         m_MethodName: YesExit
         m_Mode: 1
@@ -1996,7 +1996,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7034754184776447644}
         m_TargetAssemblyTypeName: ESCUIController, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7034754184776447644}
         m_TargetAssemblyTypeName: ESCUIController, Assembly-CSharp
         m_MethodName: StartExitControl
         m_Mode: 1
@@ -3565,7 +3565,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7034754184776447644}
         m_TargetAssemblyTypeName: ESCUIController, Assembly-CSharp
         m_MethodName: NoMainMenu
         m_Mode: 1
