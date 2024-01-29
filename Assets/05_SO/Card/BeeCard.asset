@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uBC8C"
     - Type: 1
       Text: Bee
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 3
   <rank>k__BackingField: 2
   <icon>k__BackingField: {fileID: 21300000, guid: 1709b1d568984cb40a6f4fb67e312cca, type: 3}
   <cardExplanation>k__BackingField:

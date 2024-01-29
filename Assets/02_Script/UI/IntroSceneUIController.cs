@@ -115,7 +115,6 @@ public class IntroSceneUIController : MonoBehaviour
         }
 
     }
-
     private class BookUIController : UIController
     {
 
@@ -151,7 +150,6 @@ public class IntroSceneUIController : MonoBehaviour
         }
 
     }
-
     private class ExitUIController : UIController
     {
         private GameObject panel;
@@ -171,7 +169,42 @@ public class IntroSceneUIController : MonoBehaviour
             panel.SetActive(false);
         }
     }
+    private class RespiController : UIController
+    {
+        private GameObject panel;
 
+        private Transform rootTrm;
+
+        public RespiController(Transform rootTrm)
+        {
+
+            this.rootTrm = rootTrm;
+
+        }
+
+        public override void Controll()
+        {
+
+            if (isControl) return;
+
+            isControl = true;
+
+            rootTrm.DOLocalMoveX(258, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+
+        }
+
+        public override void Release()
+        {
+
+            if (isControl) return;
+
+            isControl = true;
+
+            rootTrm.DOLocalMoveX(800, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+
+        }
+
+    }
 
     [SerializeField] private ShowTitle titleUI;
     [SerializeField] private Transform mainUI;
@@ -179,6 +212,7 @@ public class IntroSceneUIController : MonoBehaviour
     [SerializeField] private Transform rankingUI;
     [SerializeField] private Transform settingUI;
     [SerializeField] private Transform bookUI;
+    [SerializeField] private Transform respiUI;
     [SerializeField] private GameObject exitUI;
     [SerializeField] private TMP_Text languageText;
     [SerializeField] private GameObject namePanel;
@@ -199,6 +233,7 @@ public class IntroSceneUIController : MonoBehaviour
     private SettingUIController settingUIController;
     private BookUIController bookUIController;
     private ExitUIController exitUIController;
+    private RespiController respiController;
     private List<UIController> controllerLs = new();
 
     private LanguageType current;
@@ -213,6 +248,7 @@ public class IntroSceneUIController : MonoBehaviour
         settingUIController = new(settingUI);
         bookUIController = new(bookUI);
         exitUIController = new(exitUI);
+        respiController = new(respiUI);
 
         controllerLs.Add(modeSelectUIController);
         controllerLs.Add(rankingUIController);
@@ -274,6 +310,13 @@ public class IntroSceneUIController : MonoBehaviour
 
     }
 
+    public void StartControlRespi()
+    {
+
+        respiController.Controll();
+        Release(respiController);
+
+    }
     public void StartRankingControl()
     {
 

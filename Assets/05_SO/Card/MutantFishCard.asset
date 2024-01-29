@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 166cf11f92ea73c42bf7a6bf14188170, type: 3}
-  m_Name: LarvaCard
+  m_Name: MutantFishCard
   m_EditorClassIdentifier: 
   <cardName>k__BackingField:
     languageDatas:
     - Type: 0
-      Text: "\uC560\uBC8C\uB808"
+      Text: "\uBCC0\uC774 \uBB3C\uACE0\uAE30"
     - Type: 1
-      Text: 'Larva
+      Text: 'Mutant
 
-'
+        Fish'
   <cardType>k__BackingField: 3
-  <rank>k__BackingField: 1
-  <icon>k__BackingField: {fileID: 21300000, guid: 6a521d0781977444aaf40ee3fb090672, type: 3}
+  <rank>k__BackingField: 10
+  <icon>k__BackingField: {fileID: 21300000, guid: 7b5c988add1fc0c488b254bf95fc4890, type: 3}
   <cardExplanation>k__BackingField:
     languageDatas:
     - Type: 0
-      Text: "\uAFC8\uD2C0\uAFC8\uD2C0"
+      Text: 
     - Type: 1
-      Text: WiggleWiggle
+      Text: 
