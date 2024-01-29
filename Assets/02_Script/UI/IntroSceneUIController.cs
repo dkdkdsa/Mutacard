@@ -237,6 +237,8 @@ public class IntroSceneUIController : MonoBehaviour
 
         SetLanguageText();
 
+        AudioLoad();
+
     }
 
     public void StartModeControl()
@@ -370,8 +372,19 @@ public class IntroSceneUIController : MonoBehaviour
 
     public void AudioSetting(Slider slider)
     {
+        PlayerPrefs.SetFloat("SoundValue", slider.value);
+
         AudioManager.Instance.SetBgmVolume(slider.value);
         AudioManager.Instance.SetSfxVolume(slider.value);
+    }
+
+    private void AudioLoad()
+    {
+        float soundValue = PlayerPrefs.GetFloat("SoundValue");
+        if (soundValue == 0.0f) soundValue = 1;
+
+        AudioManager.Instance.SetBgmVolume(soundValue);
+        AudioManager.Instance.SetSfxVolume(soundValue);
     }
 
     public void LanChPlus()
