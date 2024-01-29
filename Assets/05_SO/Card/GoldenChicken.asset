@@ -20,7 +20,7 @@ MonoBehaviour:
       Text: 'Golden
 
         Chicken'
-  <cardType>k__BackingField: 3
+  <cardType>k__BackingField: 0
   <rank>k__BackingField: 5
   <icon>k__BackingField: {fileID: 21300000, guid: 3dec43d7ef814d44992f78176fbdb91e, type: 3}
   <cardExplanation>k__BackingField:

@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uB3FC\uC9C0"
     - Type: 1
       Text: Pig
-  <cardType>k__BackingField: 3
+  <cardType>k__BackingField: 0
   <rank>k__BackingField: 1
   <icon>k__BackingField: {fileID: 21300000, guid: 0d1f7c3fc94c79a4eb0169e8b3893e02, type: 3}
   <cardExplanation>k__BackingField:

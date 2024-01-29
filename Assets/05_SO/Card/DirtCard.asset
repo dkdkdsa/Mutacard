@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uD759"
     - Type: 1
       Text: Dirt
-  <cardType>k__BackingField: 2
+  <cardType>k__BackingField: 0
   <rank>k__BackingField: 1
   <icon>k__BackingField: {fileID: 21300000, guid: e054d505b7979824583e1fa8297f845b, type: 3}
   <cardExplanation>k__BackingField:

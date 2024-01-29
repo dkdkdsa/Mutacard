@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uC0AC\uACFC\uB098\uBB34"
     - Type: 1
       Text: AppleTree
-  <cardType>k__BackingField: 1
+  <cardType>k__BackingField: 0
   <rank>k__BackingField: 3
   <icon>k__BackingField: {fileID: 21300000, guid: 7574804c3e21d064eb91ef407d7187d3, type: 3}
   <cardExplanation>k__BackingField:

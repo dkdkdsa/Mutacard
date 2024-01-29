@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uBC88\uB370\uAE30"
     - Type: 1
       Text: Pupa
-  <cardType>k__BackingField: 3
+  <cardType>k__BackingField: 0
   <rank>k__BackingField: 3
   <icon>k__BackingField: {fileID: 21300000, guid: 69bf8d8020825d84683c475f881ccead, type: 3}
   <cardExplanation>k__BackingField:
