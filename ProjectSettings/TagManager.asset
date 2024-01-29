@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MargeBox
   - SellBox
+  - Shadow
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - LightingSystem
+  - 2DWater
   - 
   - 
   - 
@@ -46,6 +47,12 @@ TagManager:
   - name: BG
     uniqueID: 2327118491
     locked: 0
+  - name: Shadows
+    uniqueID: 3324924705
+    locked: 0
   - name: Card
     uniqueID: 61873305
+    locked: 0
+  - name: MapObj
+    uniqueID: 262216257
     locked: 0
