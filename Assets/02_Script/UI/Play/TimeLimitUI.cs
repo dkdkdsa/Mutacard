@@ -16,7 +16,7 @@ public class TimeLimitUI : MonoBehaviour
     private void Awake()
     {
 
-        plusText = timeText.GetComponentInChildren<TMP_Text>();
+        plusText = timeText.transform.Find("PlusText").GetComponent<TMP_Text>();
 
         data.AddText(LanguageType.KOR, "제한 시간");
         data.AddText(LanguageType.ENG, "Time limit");
@@ -33,18 +33,19 @@ public class TimeLimitUI : MonoBehaviour
     private void HandleTimeChanged(float obj)
     {
 
-        timeText.text = $"{data.Text} : {obj}";
+        timeText.text = $"{data.Text} : {(float)Math.Round(obj, 2)}";
 
     }
 
     private void GetValueEffect(float value)
     {
-        plusText.text = $"+{value}";
+        plusText.text = $"+{(float)Math.Round(value, 2)}";
 
         Sequence seq = DOTween.Sequence();
 
-        seq.Append(transform.DOScale(Vector3.one * 1.3f, 0.2f)).SetEase(Ease.OutQuad);
-        seq.Append(transform.DOScale(Vector3.one * 1, 0.2f)).SetEase(Ease.OutQuad);
+        seq.Append(plusText.transform.DOScale(Vector3.one * 1.5f, 0.2f)).SetEase(Ease.InQuad);
+        seq.Append(plusText.transform.DOScale(Vector3.one * 1, 0.2f)).SetEase(Ease.OutQuad);
+        seq.OnComplete(() => { plusText.text = ""; });
     }
 
 

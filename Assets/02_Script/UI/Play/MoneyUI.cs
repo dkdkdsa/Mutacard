@@ -15,7 +15,7 @@ public class MoneyUI : MonoBehaviour
     private void Awake()
     {
 
-        plusText = moneyText.GetComponentInChildren<TMP_Text>();
+        plusText = moneyText;
 
         data.AddText(LanguageType.KOR, "µ·");
         data.AddText(LanguageType.ENG, "Money");
@@ -37,7 +37,8 @@ public class MoneyUI : MonoBehaviour
 
         Sequence seq = DOTween.Sequence();
 
-        seq.Append(transform.DOScale(Vector3.one * 1.3f, 0.2f)).SetEase(Ease.OutQuad);
-        seq.Append(transform.DOScale(Vector3.one * 1, 0.2f)).SetEase(Ease.OutQuad);
+        seq.Append(plusText.transform.DOScale(Vector3.one * 1.3f, 0.2f)).SetEase(Ease.OutQuad);
+        seq.Append(plusText.transform.DOScale(Vector3.one * 1, 0.2f)).SetEase(Ease.OutQuad);
+        seq.OnComplete(() => { plusText.text = ""; });
     }
 }

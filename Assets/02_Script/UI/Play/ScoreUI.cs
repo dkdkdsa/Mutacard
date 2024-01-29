@@ -15,7 +15,7 @@ public class ScoreUI : MonoBehaviour
     private void Awake()
     {
 
-        plusText = scoreText.GetComponentInChildren<TMP_Text>();
+        plusText = scoreText;
 
         data.AddText(LanguageType.KOR, "Á¡¼ö");
         data.AddText(LanguageType.ENG, "Score");
@@ -40,8 +40,9 @@ public class ScoreUI : MonoBehaviour
 
         Sequence seq = DOTween.Sequence();
 
-        seq.Append(transform.DOScale(Vector3.one * 1.3f, 0.2f)).SetEase(Ease.OutQuad);
-        seq.Append(transform.DOScale(Vector3.one * 1, 0.2f)).SetEase(Ease.OutQuad);
+        seq.Append(plusText.transform.DOScale(Vector3.one * 1.3f, 0.2f)).SetEase(Ease.OutQuad);
+        seq.Append(plusText.transform.DOScale(Vector3.one * 1, 0.2f)).SetEase(Ease.OutQuad);
+        seq.OnComplete(() => { plusText.text = ""; });
     }
 
 }
