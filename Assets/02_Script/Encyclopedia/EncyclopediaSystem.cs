@@ -50,7 +50,8 @@ public class EncyclopediaSystem : MonoBehaviour
         dataPanel.transform.DOMoveY(600, 0.5f);
 
         dataImage.sprite = data.icon;
-        dataNameText.text = data.cardName.Text;
+        var tex = data.cardName.Text.Replace('\n', ' ');
+        dataNameText.text = tex;
         dataEncyclopediaText.text = data.cardExplanation.Text;
     }
 

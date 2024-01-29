@@ -21,7 +21,7 @@ MonoBehaviour:
 
         Comb'
   <cardType>k__BackingField: 1
-  <rank>k__BackingField: 10
+  <rank>k__BackingField: 20
   <icon>k__BackingField: {fileID: 21300000, guid: 237d5a930b5534949b6310dd72448fe1, type: 3}
   <cardExplanation>k__BackingField:
     languageDatas:

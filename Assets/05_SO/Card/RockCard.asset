@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uB3CC"
     - Type: 1
       Text: Rock
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 2
   <rank>k__BackingField: 1
   <icon>k__BackingField: {fileID: 21300000, guid: 682e7b81c86e22d449da6c47dc3efbe8, type: 3}
   <cardExplanation>k__BackingField:

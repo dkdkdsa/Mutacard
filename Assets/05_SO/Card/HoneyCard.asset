@@ -19,7 +19,7 @@ MonoBehaviour:
     - Type: 1
       Text: Honey
   <cardType>k__BackingField: 0
-  <rank>k__BackingField: 4
+  <rank>k__BackingField: 40
   <icon>k__BackingField: {fileID: 21300000, guid: 2e2ac871ed98af54eb0977297ea58891, type: 3}
   <cardExplanation>k__BackingField:
     languageDatas:

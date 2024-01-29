@@ -19,7 +19,7 @@ MonoBehaviour:
     - Type: 1
       Text: CookedFish
   <cardType>k__BackingField: 0
-  <rank>k__BackingField: 5
+  <rank>k__BackingField: 50
   <icon>k__BackingField: {fileID: 21300000, guid: ac670853ff007da46943e5b6db2f7e24, type: 3}
   <cardExplanation>k__BackingField:
     languageDatas:

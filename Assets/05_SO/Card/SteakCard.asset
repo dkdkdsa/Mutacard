@@ -19,7 +19,7 @@ MonoBehaviour:
     - Type: 1
       Text: Steak
   <cardType>k__BackingField: 0
-  <rank>k__BackingField: 2
+  <rank>k__BackingField: 20
   <icon>k__BackingField: {fileID: 21300000, guid: ffabebc7ed76f974badb79099989fd11, type: 3}
   <cardExplanation>k__BackingField:
     languageDatas:
