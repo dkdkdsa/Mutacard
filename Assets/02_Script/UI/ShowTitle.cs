@@ -7,8 +7,6 @@ using DG.Tweening;
 public class ShowTitle : MonoBehaviour
 {
     [SerializeField] private Image[] images;
-    [SerializeField] private float endValue;
-    [SerializeField] private float duration;
 
     private Sequence seq;
 
@@ -17,15 +15,11 @@ public class ShowTitle : MonoBehaviour
         seq = DOTween.Sequence();
     }
 
-    private void Start()
+    public void Title(float waitTime, float endValue, float duration)
     {
-        Title(endValue, duration);
-    }
-
-    public void Title(float endValue, float duration)
-    {
-        seq.Append(images[0].rectTransform.DOAnchorPosY(endValue + 52, duration).SetEase(Ease.OutQuad))
-            .Join(images[0].DOFade(1, duration))
+        seq.PrependInterval(waitTime)
+        .Append(images[0].rectTransform.DOAnchorPosY(endValue + 52, duration).SetEase(Ease.OutQuad))
+        .Join(images[0].DOFade(1, duration))
         .Append(images[1].rectTransform.DOAnchorPosY(endValue + 1.6f, duration).SetEase(Ease.OutQuad))
         .Join(images[1].DOFade(1, duration))
         .Append(images[2].rectTransform.DOAnchorPosY(endValue + 27, duration).SetEase(Ease.OutQuad))
