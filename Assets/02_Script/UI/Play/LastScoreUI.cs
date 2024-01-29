@@ -23,11 +23,13 @@ public class LastScoreUI : MonoBehaviour
 
     private void HandleGameEnd(float obj)
     {
+
         gameoverPanel.SetActive(true);
         text.text = $"{data.Text} : {ScoreManager.Instance.Score}";
         menuBtn.onClick.AddListener(GotoMenuScene);
 
         Time.timeScale = 0;
+
     }
 
     private void GotoMenuScene()

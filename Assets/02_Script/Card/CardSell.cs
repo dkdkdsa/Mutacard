@@ -1,3 +1,4 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class CardSell : MonoBehaviour
 
                 MoneyManager.instance.AddMoney(targetCard.data.rank * 3);
                 Destroy(targetCard.gameObject);
+                FAED.TakePool<TextEffect>("TEF", transform.position + Vector3.one).Show($"{targetCard.data.rank * 3}$", Color.yellow);
 
             }
 

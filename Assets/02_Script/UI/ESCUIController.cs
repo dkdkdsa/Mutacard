@@ -164,6 +164,7 @@ public class ESCUIController : MonoBehaviour
 
     public void FadeESC(bool value)
     {
+
         if(value)
         {
             blackPanel.DOFade(0.5f, 0.3f).SetUpdate(true);

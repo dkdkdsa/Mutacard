@@ -1,4 +1,6 @@
+using Cinemachine;
 using DG.Tweening;
+using FD.Dev;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,10 +29,14 @@ public class CardManager : MonoBehaviour
 
     public event Action<int> OnCardMarged;
 
+    private CinemachineImpulseSource source;
+
     private void Awake()
     {
         
         Instance = this;
+        source = GetComponent<CinemachineImpulseSource>();
+
 
     }
 
@@ -42,6 +48,10 @@ public class CardManager : MonoBehaviour
         if (data == null) return;
 
         var pos = a.transform.position;
+
+        FAED.TakePool<TextEffect>("TEF", pos + new Vector3(0, 0.5f)).Show($"{(a.data.rank + b.data.rank) * 5}$", Color.yellow);
+
+        source.GenerateImpulse(1);
 
         MoneyManager.instance.AddMoney((a.data.rank + b.data.rank) * 5);
         AudioManager.Instance.StartSfx("CardAddit");

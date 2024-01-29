@@ -189,6 +189,7 @@ MonoBehaviour:
   - {fileID: 5538136290245182883, guid: 52266bad7d4e08643865d467041aece1, type: 3}
   - {fileID: 2828020696883668481, guid: 55f6fd28d37ae21448a94aacd8e7d024, type: 3}
   - {fileID: 4328586348805705842, guid: 658a6b7edf9577e4c8a0c94db6d9fdd5, type: 3}
+  - {fileID: 1583427782112221848, guid: 5546fb5cd0ec0094b9017fb07b4ef164, type: 3}
   numOfCard: 10
 --- !u!65 &8977582114669075794
 BoxCollider:
