@@ -114913,17 +114913,35 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 92f40290c6aa705459b039819acdf802, type: 2}
   - {fileID: 11400000, guid: 0dfecd30ef659964fa07e45cc5d5aa3c, type: 2}
   - {fileID: 11400000, guid: 07925bf60b1d3b549b2a0833ca64b82e, type: 2}
-  - {fileID: 11400000, guid: 1331e44e0aa51234ca8c42e0ce13367a, type: 2}
+  - {fileID: 11400000, guid: 1c8f04b04745f984ea9bdcefcb34721b, type: 2}
+  - {fileID: 11400000, guid: 278838c535075f64e92856083b4b0dcc, type: 2}
+  - {fileID: 11400000, guid: 9dc56732e88ba6e428b959a357522e2c, type: 2}
+  - {fileID: 11400000, guid: de0a1d2fc1db9a846a8791e4ca4d870d, type: 2}
+  - {fileID: 11400000, guid: a842acf6eab264f4c8e2fc10afbdcfac, type: 2}
+  - {fileID: 11400000, guid: 4385141b8cc91c849bba0b76c8fc067b, type: 2}
+  - {fileID: 11400000, guid: 319d7cad51b7f0c419cd8499ce80e94e, type: 2}
+  - {fileID: 11400000, guid: bbe0218cf7d541d4e8784b028c174fdb, type: 2}
+  - {fileID: 11400000, guid: e15de2eb7db4197449a8c994c1d619f7, type: 2}
   - {fileID: 11400000, guid: 15f4edfee297da04a9460e8cbcf72925, type: 2}
   - {fileID: 11400000, guid: 86b16ca478fb2bd4487ae05aa52038d3, type: 2}
+  - {fileID: 11400000, guid: 1331e44e0aa51234ca8c42e0ce13367a, type: 2}
+  - {fileID: 11400000, guid: 077545279039fe94eb8464be8935d6d2, type: 2}
+  - {fileID: 11400000, guid: c180bd504fe30e74597aaa58d1b1cdd6, type: 2}
+  - {fileID: 11400000, guid: 0138d087e338e0349824c1b040d74e98, type: 2}
+  - {fileID: 11400000, guid: f960c62e1bf56c8419c3e3f862a6d9f3, type: 2}
+  - {fileID: 11400000, guid: 59ada1c18ac985a48a78ca4673a5e06a, type: 2}
   - {fileID: 11400000, guid: d9cd26f603967e34f93cbd5b68d18c30, type: 2}
   - {fileID: 11400000, guid: b81da2a82d9407d4eb99873243ab058e, type: 2}
   - {fileID: 11400000, guid: ace3d92f86b506644974e44833b9ad39, type: 2}
+  - {fileID: 11400000, guid: ac083cce009f358469fb6c2c6749d757, type: 2}
   - {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
   - {fileID: 11400000, guid: bebcab424fc166e45b3f305012b9c428, type: 2}
   - {fileID: 11400000, guid: 667cdf8d2ccabf44f99876858c0e8d93, type: 2}
+  - {fileID: 11400000, guid: 40dbd21babb2b744da61588820a7aca8, type: 2}
+  - {fileID: 11400000, guid: b9612e79789abb34da1c995dc89429b6, type: 2}
+  - {fileID: 11400000, guid: eba67ed7352fd8a4ea3823857083355c, type: 2}
   - {fileID: 11400000, guid: be2169593833fa04fae17963b2e4f9ef, type: 2}
-  - {fileID: 11400000, guid: e15de2eb7db4197449a8c994c1d619f7, type: 2}
+  - {fileID: 11400000, guid: be9f56eccbbb8db46aa27deabcadd693, type: 2}
   contentTrs: {fileID: 4793974476388271240}
   dataPanel: {fileID: 4292208850749254334}
   dataImage: {fileID: 1019330889214333704}
@@ -115380,7 +115398,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1500}
+  m_SizeDelta: {x: 0, y: 2400}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5251088866536741998
 MonoBehaviour:
@@ -115426,7 +115444,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2848022539572161355}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4921642
+  m_Size: 0.3076026
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
