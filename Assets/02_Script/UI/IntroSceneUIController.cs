@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IntroSceneUIController : MonoBehaviour
 {
@@ -297,6 +298,12 @@ public class IntroSceneUIController : MonoBehaviour
 
         }
 
+    }
+
+    public void AudioSetting(Slider slider)
+    {
+        AudioManager.Instance.SetBgmVolume(slider.value);
+        AudioManager.Instance.SetSfxVolume(slider.value);
     }
 
     public void LanChPlus()

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class EncyclopediaSystem : MonoBehaviour
 {
     public static EncyclopediaSystem Instance;
-
-    private Dictionary<string, EncyclopediaCase> encyclopediaDataDick = new Dictionary<string, EncyclopediaCase>();
 
     [Header("Prefab")]
     [SerializeField] private EncyclopediaCase dataCase;
@@ -32,28 +31,17 @@ public class EncyclopediaSystem : MonoBehaviour
 
     private void Start()
     {
-        foreach (EncyclopediaData data in Resources.LoadAll<EncyclopediaData>("EncyclopediaData"))
+        foreach (EncyclopediaData data in EncyclopediaManager.Instance.encyclopediaDataDick.Values)
         {
             EncyclopediaCase newCase = Instantiate(dataCase, contentTrs);
             newCase.data = data;
-            encyclopediaDataDick[data.dataName] = newCase;
         }
-    }
-
-    public void RegistrationData(string dataName)
-    {
-        if (!encyclopediaDataDick.ContainsKey(dataName))
-        {
-            Debug.Log($"{dataName}(은)는 도감에는 존재하지 않는 포켓몬");
-            return;
-        }
-
-        encyclopediaDataDick[dataName].Registration();
     }
 
     public void PopupDataPanel(EncyclopediaData data)
     {
-        dataPanel.SetActive(true);
+        dataPanel.transform.DOMoveY(950, 0.5f);
+
         dataImage.sprite = data.dataSprite;
         dataNameText.text = data.dataName;
         dataEncyclopediaText.text = data.dataExplanation;
@@ -61,6 +49,6 @@ public class EncyclopediaSystem : MonoBehaviour
 
     private void PopdownDataPanel()
     {
-        dataPanel.SetActive(false);
+        dataPanel.transform.DOMoveY(700, 0.5f);
     }
 }
