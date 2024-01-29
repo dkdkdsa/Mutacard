@@ -47,7 +47,7 @@ public class EncyclopediaSystem : MonoBehaviour
 
     public void PopupDataPanel(CardDataSO data)
     {
-        dataPanel.transform.DOMoveY(950, 0.5f);
+        dataPanel.transform.DOMoveY(600, 0.5f);
 
         dataImage.sprite = data.icon;
         dataNameText.text = data.cardName.Text;
@@ -56,6 +56,6 @@ public class EncyclopediaSystem : MonoBehaviour
 
     private void PopdownDataPanel()
     {
-        dataPanel.transform.DOMoveY(700, 0.5f);
+        dataPanel.transform.DOMoveY(300, 0.5f);
     }
 }
