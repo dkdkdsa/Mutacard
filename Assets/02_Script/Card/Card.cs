@@ -61,6 +61,7 @@ public abstract class Card : MonoBehaviour
         if (isMovement)
         {
 
+            if (Time.timeScale == 0) return;
             transform.position = MousePos();
 
         }

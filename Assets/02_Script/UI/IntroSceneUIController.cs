@@ -28,7 +28,7 @@ public class IntroSceneUIController : MonoBehaviour
 
             isControl = true;
 
-            rootTrm.DOLocalMoveX(0, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+            rootTrm.DOLocalMoveX(110, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
 
         }
 
@@ -63,7 +63,7 @@ public class IntroSceneUIController : MonoBehaviour
 
             isControl = true;
 
-            rootTrm.DOLocalMoveX(0, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+            rootTrm.DOLocalMoveX(100, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
 
         }
 
@@ -134,7 +134,7 @@ public class IntroSceneUIController : MonoBehaviour
 
             isControl = true;
 
-            rootTrm.DOLocalMoveX(0, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+            rootTrm.DOLocalMoveX(258, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
 
         }
 
@@ -151,19 +151,49 @@ public class IntroSceneUIController : MonoBehaviour
 
     }
 
+    private class ExitUIController : UIController
+    {
+        private GameObject panel;
+
+        public ExitUIController(GameObject panel)
+        {
+            this.panel = panel;
+        }
+
+        public override void Controll()
+        {
+            panel.SetActive(true);
+        }
+
+        public override void Release()
+        {
+            panel.SetActive(false);
+        }
+    }
+
+
+    [SerializeField] private ShowTitle titleUI;
+    [SerializeField] private Transform mainUI;
     [SerializeField] private Transform modeSelectUI;
     [SerializeField] private Transform rankingUI;
     [SerializeField] private Transform settingUI;
     [SerializeField] private Transform bookUI;
+    [SerializeField] private GameObject exitUI;
     [SerializeField] private TMP_Text languageText;
     [Header("-rankings-")]
     [SerializeField] private Transform rankingParent;
     [SerializeField] private RankingPanel panelPrefab;
 
+    [Header("Title")]
+    [SerializeField] private float endValue;
+    [SerializeField] private float duration;
+    [SerializeField] private float waitTime;
+
     private ModeSelectUIControll modeSelectUIController;
     private RankingUIController rankingUIController;
     private SettingUIController settingUIController;
     private BookUIController bookUIController;
+    private ExitUIController exitUIController;
     private List<UIController> controllerLs = new();
 
     private LanguageType current;
@@ -177,11 +207,13 @@ public class IntroSceneUIController : MonoBehaviour
         rankingUIController = new(rankingUI);
         settingUIController = new(settingUI);
         bookUIController = new(bookUI);
+        exitUIController = new(exitUI);
 
         controllerLs.Add(modeSelectUIController);
         controllerLs.Add(rankingUIController);
         controllerLs.Add(settingUIController);
         controllerLs.Add(bookUIController);
+        controllerLs.Add(exitUIController);
 
         LootLockerController.Init((x) =>
         {
@@ -195,6 +227,12 @@ public class IntroSceneUIController : MonoBehaviour
 
         });
 
+        Sequence seq = DOTween.Sequence();
+
+        titleUI.Title(waitTime, endValue, duration);
+        
+        seq.PrependInterval(3f)
+            .Append(mainUI.DOLocalMoveX(0, 0.3f));
     }
 
     public void StartModeControl()
@@ -228,6 +266,25 @@ public class IntroSceneUIController : MonoBehaviour
         Release(bookUIController);
 
     }
+
+    #region ExitButton
+    public void StartExitControl()
+    {
+        exitUIController.Controll();
+        Release(exitUIController);
+    }
+
+    public void NoExit()
+    {
+        exitUIController.Release();
+    }
+
+    public void YesExit()
+    {
+        Debug.Log("게임 나가기!");
+        Application.Quit();
+    }
+    #endregion
 
     public void ReleaseAll()
     {
