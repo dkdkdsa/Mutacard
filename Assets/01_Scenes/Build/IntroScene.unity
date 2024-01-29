@@ -3708,50 +3708,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44aecfa2d6ed9247b9d1d349ed0e520, type: 3}
---- !u!1 &1515129278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1515129280}
-  - component: {fileID: 1515129279}
-  m_Layer: 0
-  m_Name: EncyclopediaManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1515129279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515129278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9a9847b69853f42971cff15b1f03c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1515129280
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515129278}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1516656657
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,6 +5626,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataCase: {fileID: 541250502813895702, guid: dacd5ff05ac77bf4c91c55fa93cf2e42, type: 3}
+  cardDatas:
+  - {fileID: 11400000, guid: 956dd96bacafa284ebe2dc7284db279c, type: 2}
+  - {fileID: 11400000, guid: 7a1e8d98ef72b1140826d731404643eb, type: 2}
+  - {fileID: 11400000, guid: a7e0ac9fd1c0e2d4eb4b70ca148e5804, type: 2}
+  - {fileID: 11400000, guid: 92f40290c6aa705459b039819acdf802, type: 2}
+  - {fileID: 11400000, guid: 0dfecd30ef659964fa07e45cc5d5aa3c, type: 2}
+  - {fileID: 11400000, guid: 07925bf60b1d3b549b2a0833ca64b82e, type: 2}
+  - {fileID: 11400000, guid: 1331e44e0aa51234ca8c42e0ce13367a, type: 2}
+  - {fileID: 11400000, guid: 15f4edfee297da04a9460e8cbcf72925, type: 2}
+  - {fileID: 11400000, guid: 86b16ca478fb2bd4487ae05aa52038d3, type: 2}
+  - {fileID: 11400000, guid: d9cd26f603967e34f93cbd5b68d18c30, type: 2}
+  - {fileID: 11400000, guid: b81da2a82d9407d4eb99873243ab058e, type: 2}
+  - {fileID: 11400000, guid: ace3d92f86b506644974e44833b9ad39, type: 2}
+  - {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
+  - {fileID: 11400000, guid: bebcab424fc166e45b3f305012b9c428, type: 2}
+  - {fileID: 11400000, guid: 667cdf8d2ccabf44f99876858c0e8d93, type: 2}
+  - {fileID: 11400000, guid: be2169593833fa04fae17963b2e4f9ef, type: 2}
+  - {fileID: 11400000, guid: e15de2eb7db4197449a8c994c1d619f7, type: 2}
   contentTrs: {fileID: 4793974476388271240}
   dataPanel: {fileID: 4292208850749254334}
   dataImage: {fileID: 1019330889214333704}
@@ -6150,10 +6124,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6509,6 +6483,5 @@ SceneRoots:
   - {fileID: 1660872434}
   - {fileID: 408739186}
   - {fileID: 2024471139}
-  - {fileID: 1515129280}
   - {fileID: 1452783883}
   - {fileID: 2069291258}

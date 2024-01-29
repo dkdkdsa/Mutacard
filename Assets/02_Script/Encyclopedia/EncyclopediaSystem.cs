@@ -11,6 +11,7 @@ public class EncyclopediaSystem : MonoBehaviour
 
     [Header("Prefab")]
     [SerializeField] private EncyclopediaCase dataCase;
+    [SerializeField] private CardDataSO[] cardDatas;
 
     [Header("NormalPanel")]
     [SerializeField] private Transform contentTrs;
@@ -31,20 +32,26 @@ public class EncyclopediaSystem : MonoBehaviour
 
     private void Start()
     {
-        foreach (EncyclopediaData data in EncyclopediaManager.Instance.encyclopediaDataDick.Values)
+        //foreach (EncyclopediaData data in EncyclopediaManager.Instance.encyclopediaDataDick.Values)
+        //{
+        //    EncyclopediaCase newCase = Instantiate(dataCase, contentTrs);
+        //    newCase.data = data;
+        //}
+
+        foreach (CardDataSO cardData in cardDatas)
         {
             EncyclopediaCase newCase = Instantiate(dataCase, contentTrs);
-            newCase.data = data;
+            newCase.data = cardData;
         }
     }
 
-    public void PopupDataPanel(EncyclopediaData data)
+    public void PopupDataPanel(CardDataSO data)
     {
         dataPanel.transform.DOMoveY(950, 0.5f);
 
-        dataImage.sprite = data.dataSprite;
-        dataNameText.text = data.dataName;
-        dataEncyclopediaText.text = data.dataExplanation;
+        dataImage.sprite = data.icon;
+        dataNameText.text = data.cardName.Text;
+        dataEncyclopediaText.text = data.cardExplanation.Text;
     }
 
     private void PopdownDataPanel()
