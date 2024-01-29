@@ -190,6 +190,9 @@ public class IntroSceneUIController : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private float waitTime;
 
+    [Header("Other")]
+    [SerializeField] private Slider sounudSlider;
+
     private ModeSelectUIControll modeSelectUIController;
     private RankingUIController rankingUIController;
     private SettingUIController settingUIController;
@@ -236,6 +239,8 @@ public class IntroSceneUIController : MonoBehaviour
             .Append(mainUI.DOLocalMoveX(0, 0.3f));
 
         SetLanguageText();
+
+        AudioLoad();
 
     }
 
@@ -370,8 +375,21 @@ public class IntroSceneUIController : MonoBehaviour
 
     public void AudioSetting(Slider slider)
     {
+        PlayerPrefs.SetFloat("SoundValue", slider.value);
+
         AudioManager.Instance.SetBgmVolume(slider.value);
         AudioManager.Instance.SetSfxVolume(slider.value);
+    }
+
+    private void AudioLoad()
+    {
+        float soundValue = PlayerPrefs.GetFloat("SoundValue");
+        if (soundValue == 0.0f) soundValue = 1;
+
+        sounudSlider.value = soundValue;
+
+        AudioManager.Instance.SetBgmVolume(soundValue);
+        AudioManager.Instance.SetSfxVolume(soundValue);
     }
 
     public void LanChPlus()

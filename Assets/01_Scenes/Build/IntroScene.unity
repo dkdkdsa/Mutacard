@@ -90616,7 +90616,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 651014228}
   m_HandleRect: {fileID: 961056190}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: -0.02
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
@@ -106717,6 +106717,7 @@ MonoBehaviour:
   endValue: -424
   duration: 0.1
   waitTime: 0.5
+  sounudSlider: {fileID: 1709789329}
 --- !u!4 &2024471139
 Transform:
   m_ObjectHideFlags: 0
