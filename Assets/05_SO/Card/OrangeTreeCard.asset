@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uC624\uB80C\uC9C0\uB098\uBB34"
     - Type: 1
       Text: OrangeTree
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 1
   <rank>k__BackingField: 3
   <icon>k__BackingField: {fileID: 21300000, guid: 1bf0cd0dcc3f7dc43883ad5e62788e56, type: 3}
   <cardExplanation>k__BackingField:

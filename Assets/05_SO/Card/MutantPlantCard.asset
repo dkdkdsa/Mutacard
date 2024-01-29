@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uBCC0\uC774 \uC2DD\uBB3C"
     - Type: 1
       Text: "Mutant \nPlant"
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 3
   <rank>k__BackingField: 5
   <icon>k__BackingField: {fileID: 21300000, guid: 3b665e0bd2719a240af3cb067df2120d, type: 3}
   <cardExplanation>k__BackingField:

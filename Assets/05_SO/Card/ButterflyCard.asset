@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uB098\uBE44"
     - Type: 1
       Text: Butterfly
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 3
   <rank>k__BackingField: 5
   <icon>k__BackingField: {fileID: 21300000, guid: f7f11ef74e133d445aa2beb625f70a88, type: 3}
   <cardExplanation>k__BackingField:

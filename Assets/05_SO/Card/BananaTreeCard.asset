@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uBC14\uB098\uB098\uB098\uBB34"
     - Type: 1
       Text: BananaTree
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 1
   <rank>k__BackingField: 3
   <icon>k__BackingField: {fileID: 21300000, guid: 2d12c82a993ba0847b5c7b5ac51f0b40, type: 3}
   <cardExplanation>k__BackingField:

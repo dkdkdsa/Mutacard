@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uD638\uC218"
     - Type: 1
       Text: Lake
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 2
   <rank>k__BackingField: 1
   <icon>k__BackingField: {fileID: 21300000, guid: 25cd1f31ffc394d47bd19c7db156d440, type: 3}
   <cardExplanation>k__BackingField:

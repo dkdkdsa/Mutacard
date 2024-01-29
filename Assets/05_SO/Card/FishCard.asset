@@ -18,7 +18,7 @@ MonoBehaviour:
       Text: "\uBB3C\uACE0\uAE30"
     - Type: 1
       Text: Fish
-  <cardType>k__BackingField: 0
+  <cardType>k__BackingField: 3
   <rank>k__BackingField: 2
   <icon>k__BackingField: {fileID: 21300000, guid: 36a29b5a9f2e92449817f208b09ffc05, type: 3}
   <cardExplanation>k__BackingField:
