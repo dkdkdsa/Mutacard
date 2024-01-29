@@ -189,7 +189,7 @@ public class IntroSceneUIController : MonoBehaviour
 
             isControl = true;
 
-            rootTrm.DOLocalMoveX(258, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
+            rootTrm.DOLocalMoveX(0, 0.3f).SetEase(Ease.OutSine).OnComplete(() => isControl = false);
 
         }
 
@@ -317,6 +317,7 @@ public class IntroSceneUIController : MonoBehaviour
         Release(respiController);
 
     }
+
     public void StartRankingControl()
     {
 
