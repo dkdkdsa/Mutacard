@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3956919238146815461}
   - component: {fileID: 674581049310201308}
+  - component: {fileID: 2588553759312526423}
   m_Layer: 0
   m_Name: CardManager
   m_TagString: Untagged
@@ -84,6 +85,7 @@ MonoBehaviour:
     - {fileID: 8205437737186274889, guid: 7f2050e39d4320242842bff9c31df2e7, type: 3}
     - {fileID: 2324712090577119432, guid: b6bbbf20d0a826249a3dab7aa7c692f8, type: 3}
     - {fileID: 4328586348805705842, guid: 658a6b7edf9577e4c8a0c94db6d9fdd5, type: 3}
+    - {fileID: 1423652324661835070, guid: 9fac61e8b6734ac4a9f3750e7ac14c1b, type: 3}
   - targetA: {fileID: 11400000, guid: 7a1e8d98ef72b1140826d731404643eb, type: 2}
     targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
     destroyAbleA: 0
@@ -233,3 +235,86 @@ MonoBehaviour:
     destroyAbleB: 1
     cardPrefab: {fileID: 8205437737186274889, guid: 7f2050e39d4320242842bff9c31df2e7, type: 3}
     mutationCards: []
+  - targetA: {fileID: 11400000, guid: ac083cce009f358469fb6c2c6749d757, type: 2}
+    targetB: {fileID: 11400000, guid: be9f56eccbbb8db46aa27deabcadd693, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 1
+    cardPrefab: {fileID: 3432291879014433839, guid: 328bc273ff4af46439dfe5de3201ad9a, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: f960c62e1bf56c8419c3e3f862a6d9f3, type: 2}
+    targetB: {fileID: 11400000, guid: 667cdf8d2ccabf44f99876858c0e8d93, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 845422569959115143, guid: 6922373ede0ad194d9826865d3afd798, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: ace3d92f86b506644974e44833b9ad39, type: 2}
+    targetB: {fileID: 11400000, guid: ace3d92f86b506644974e44833b9ad39, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 5538136290245182883, guid: 52266bad7d4e08643865d467041aece1, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: bbe0218cf7d541d4e8784b028c174fdb, type: 2}
+    targetB: {fileID: 11400000, guid: 9dc56732e88ba6e428b959a357522e2c, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 1
+    cardPrefab: {fileID: 9106556537281549755, guid: 145da85bfbfff604186ac46e687ba225, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: eba67ed7352fd8a4ea3823857083355c, type: 2}
+    targetB: {fileID: 11400000, guid: be2169593833fa04fae17963b2e4f9ef, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 4911225886237095775, guid: 1bead7db77d6f9241a99d61d3d4a2bd1, type: 3}
+    mutationCards: []
+--- !u!114 &2588553759312526423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615403192004654770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.5
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -1, z: 0}

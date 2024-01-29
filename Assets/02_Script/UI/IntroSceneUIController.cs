@@ -181,6 +181,7 @@ public class IntroSceneUIController : MonoBehaviour
     [SerializeField] private Transform bookUI;
     [SerializeField] private GameObject exitUI;
     [SerializeField] private TMP_Text languageText;
+    [SerializeField] private GameObject namePanel;
     [Header("-rankings-")]
     [SerializeField] private Transform rankingParent;
     [SerializeField] private RankingPanel panelPrefab;
@@ -227,6 +228,18 @@ public class IntroSceneUIController : MonoBehaviour
 
                 SetScoreRanking();
 
+                LootLockerController.GetPlayerName((x) =>
+                {
+
+                    if(x == string.Empty)
+                    {
+
+                        namePanel.gameObject.SetActive(true);
+
+                    }
+
+                });
+
             }
 
         });
@@ -241,6 +254,15 @@ public class IntroSceneUIController : MonoBehaviour
         SetLanguageText();
 
         AudioLoad();
+
+    }
+
+    public void SetName()
+    {
+
+        string name = namePanel.GetComponentInChildren<TMP_InputField>().text;
+
+        LootLockerController.SetPlayerName(name);
 
     }
 

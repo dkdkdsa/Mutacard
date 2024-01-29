@@ -102,8 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includeCards:
   - {fileID: 4057203130923429269, guid: 03f123d48e51ad34f8962f54156db50a, type: 3}
-  - {fileID: 4057203130923429269, guid: 03f123d48e51ad34f8962f54156db50a, type: 3}
-  numOfCard: 10
+  - {fileID: 5861549633293278666, guid: a0d94feb203568d47930864e4eef6b00, type: 3}
+  - {fileID: 8205437737186274889, guid: 7f2050e39d4320242842bff9c31df2e7, type: 3}
+  numOfCard: 4
 --- !u!65 &8235812483859651541
 BoxCollider:
   m_ObjectHideFlags: 0

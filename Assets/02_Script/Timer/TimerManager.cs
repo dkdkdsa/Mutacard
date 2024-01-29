@@ -37,13 +37,21 @@ public class TimerManager : MonoBehaviour
     private void HandleGameStarted(GameMods mod)
     {
 
-        gameStrarted = true;
+
         if(mod == GameMods.Time)
         {
 
             CardManager.Instance.OnCardMarged += HandleCardMarged;
 
         }
+
+        if(mod != GameMods.infinite)
+        {
+
+            gameStrarted = true;
+
+        }
+
 
     }
 
@@ -77,6 +85,8 @@ public class TimerManager : MonoBehaviour
         if(currentTime <= 0 && gameStrarted)
         {
 
+            currentTime = 0;
+            OnTimeChangedEvent?.Invoke(0);
             gameStrarted = false;
             OnTimeOutEvent?.Invoke(totalTime);
 
