@@ -255,6 +255,7 @@ public class IntroSceneUIController : MonoBehaviour
         controllerLs.Add(settingUIController);
         controllerLs.Add(bookUIController);
         controllerLs.Add(exitUIController);
+        controllerLs.Add(respiController);
 
         LootLockerController.Init((x) =>
         {

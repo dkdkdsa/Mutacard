@@ -58,7 +58,7 @@ public class TimerManager : MonoBehaviour
     private void HandleCardMarged(int rank)
     {
 
-        AddTime(rank * 1.5f);
+        AddTime(rank / 10);
 
     }
 
