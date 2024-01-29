@@ -22,6 +22,7 @@ public class MoneyManager : MonoBehaviour
     public void AddMoney(int money)
     {
 
+        AudioManager.Instance.StartSfx("Money");
         this.money += money;
         OnMoneyAddEvent?.Invoke(money);
 

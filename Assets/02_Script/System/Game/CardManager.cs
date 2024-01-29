@@ -44,6 +44,7 @@ public class CardManager : MonoBehaviour
         var pos = a.transform.position;
 
         MoneyManager.instance.AddMoney((a.data.rank + b.data.rank) * 5);
+        AudioManager.Instance.StartSfx("CardAddit");
 
         if((a.data == data.targetA && data.destroyAbleA) || (a.data == data.targetB && data.destroyAbleB))
         {

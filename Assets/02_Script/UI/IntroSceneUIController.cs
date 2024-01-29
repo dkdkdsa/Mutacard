@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IntroSceneUIController : MonoBehaviour
@@ -233,6 +234,9 @@ public class IntroSceneUIController : MonoBehaviour
         
         seq.PrependInterval(3f)
             .Append(mainUI.DOLocalMoveX(0, 0.3f));
+
+        SetLanguageText();
+
     }
 
     public void StartModeControl()
@@ -354,6 +358,13 @@ public class IntroSceneUIController : MonoBehaviour
             item.Release();
 
         }
+
+    }
+
+    public void LoadScene(string sceneName)
+    {
+
+        SceneManager.LoadScene(sceneName);
 
     }
 

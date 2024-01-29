@@ -80,19 +80,28 @@ MonoBehaviour:
     destroyAbleA: 0
     destroyAbleB: 1
     cardPrefab: {fileID: 1698408196571700037, guid: 4291e65a6001d72418865b1f86ae546e, type: 3}
-    mutationCards: []
+    mutationCards:
+    - {fileID: 8205437737186274889, guid: 7f2050e39d4320242842bff9c31df2e7, type: 3}
+    - {fileID: 2324712090577119432, guid: b6bbbf20d0a826249a3dab7aa7c692f8, type: 3}
+    - {fileID: 4328586348805705842, guid: 658a6b7edf9577e4c8a0c94db6d9fdd5, type: 3}
   - targetA: {fileID: 11400000, guid: 7a1e8d98ef72b1140826d731404643eb, type: 2}
     targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
     destroyAbleA: 0
     destroyAbleB: 1
     cardPrefab: {fileID: 6375376750530519742, guid: 8d4d999bbeae7324a8e6ccbae4434d5e, type: 3}
-    mutationCards: []
+    mutationCards:
+    - {fileID: 8205437737186274889, guid: 7f2050e39d4320242842bff9c31df2e7, type: 3}
+    - {fileID: 2324712090577119432, guid: b6bbbf20d0a826249a3dab7aa7c692f8, type: 3}
+    - {fileID: 4328586348805705842, guid: 658a6b7edf9577e4c8a0c94db6d9fdd5, type: 3}
   - targetA: {fileID: 11400000, guid: a7e0ac9fd1c0e2d4eb4b70ca148e5804, type: 2}
     targetB: {fileID: 11400000, guid: 56d23a2b6034e6e43911cba3f1315473, type: 2}
     destroyAbleA: 0
     destroyAbleB: 1
     cardPrefab: {fileID: 6664878558434302339, guid: 070a487eaf4f2344b930cb4dafde6c4d, type: 3}
-    mutationCards: []
+    mutationCards:
+    - {fileID: 8205437737186274889, guid: 7f2050e39d4320242842bff9c31df2e7, type: 3}
+    - {fileID: 2324712090577119432, guid: b6bbbf20d0a826249a3dab7aa7c692f8, type: 3}
+    - {fileID: 4328586348805705842, guid: 658a6b7edf9577e4c8a0c94db6d9fdd5, type: 3}
   - targetA: {fileID: 11400000, guid: 92f40290c6aa705459b039819acdf802, type: 2}
     targetB: {fileID: 11400000, guid: bebcab424fc166e45b3f305012b9c428, type: 2}
     destroyAbleA: 1
@@ -158,4 +167,69 @@ MonoBehaviour:
     destroyAbleA: 0
     destroyAbleB: 0
     cardPrefab: {fileID: 8473635206224418817, guid: f4f9ec9ce5690c849b483ec4b74882da, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 9dc56732e88ba6e428b959a357522e2c, type: 2}
+    targetB: {fileID: 11400000, guid: 07925bf60b1d3b549b2a0833ca64b82e, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 5832358585213128549, guid: ddc811761d5bf244cabff0d792181c6e, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 9dc56732e88ba6e428b959a357522e2c, type: 2}
+    targetB: {fileID: 11400000, guid: 0dfecd30ef659964fa07e45cc5d5aa3c, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 5832358585213128549, guid: ddc811761d5bf244cabff0d792181c6e, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 9dc56732e88ba6e428b959a357522e2c, type: 2}
+    targetB: {fileID: 11400000, guid: 92f40290c6aa705459b039819acdf802, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 1
+    cardPrefab: {fileID: 5832358585213128549, guid: ddc811761d5bf244cabff0d792181c6e, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: de0a1d2fc1db9a846a8791e4ca4d870d, type: 2}
+    targetB: {fileID: 11400000, guid: 956dd96bacafa284ebe2dc7284db279c, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 0
+    cardPrefab: {fileID: 4057203130923429269, guid: 03f123d48e51ad34f8962f54156db50a, type: 3}
+    mutationCards:
+    - {fileID: 5861549633293278666, guid: a0d94feb203568d47930864e4eef6b00, type: 3}
+  - targetA: {fileID: 11400000, guid: de0a1d2fc1db9a846a8791e4ca4d870d, type: 2}
+    targetB: {fileID: 11400000, guid: 7a1e8d98ef72b1140826d731404643eb, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 0
+    cardPrefab: {fileID: 4057203130923429269, guid: 03f123d48e51ad34f8962f54156db50a, type: 3}
+    mutationCards:
+    - {fileID: 5861549633293278666, guid: a0d94feb203568d47930864e4eef6b00, type: 3}
+  - targetA: {fileID: 11400000, guid: de0a1d2fc1db9a846a8791e4ca4d870d, type: 2}
+    targetB: {fileID: 11400000, guid: a7e0ac9fd1c0e2d4eb4b70ca148e5804, type: 2}
+    destroyAbleA: 1
+    destroyAbleB: 0
+    cardPrefab: {fileID: 4057203130923429269, guid: 03f123d48e51ad34f8962f54156db50a, type: 3}
+    mutationCards:
+    - {fileID: 5861549633293278666, guid: a0d94feb203568d47930864e4eef6b00, type: 3}
+  - targetA: {fileID: 11400000, guid: a842acf6eab264f4c8e2fc10afbdcfac, type: 2}
+    targetB: {fileID: 11400000, guid: a7e0ac9fd1c0e2d4eb4b70ca148e5804, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 0
+    cardPrefab: {fileID: 2324712090577119432, guid: b6bbbf20d0a826249a3dab7aa7c692f8, type: 3}
+    mutationCards: []
+  - targetA: {fileID: 11400000, guid: 40dbd21babb2b744da61588820a7aca8, type: 2}
+    targetB: {fileID: 11400000, guid: a842acf6eab264f4c8e2fc10afbdcfac, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 0
+    cardPrefab: {fileID: 8184344209323781568, guid: 8b314ac339507684b84dd725a1766664, type: 3}
+    mutationCards:
+    - {fileID: 462795957393469439, guid: 34359a8a4164386409febcae4b2b449a, type: 3}
+  - targetA: {fileID: 11400000, guid: 319d7cad51b7f0c419cd8499ce80e94e, type: 2}
+    targetB: {fileID: 11400000, guid: 40dbd21babb2b744da61588820a7aca8, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 0
+    cardPrefab: {fileID: 8184344209323781568, guid: 8b314ac339507684b84dd725a1766664, type: 3}
+    mutationCards:
+    - {fileID: 5861549633293278666, guid: a0d94feb203568d47930864e4eef6b00, type: 3}
+  - targetA: {fileID: 11400000, guid: 319d7cad51b7f0c419cd8499ce80e94e, type: 2}
+    targetB: {fileID: 11400000, guid: 278838c535075f64e92856083b4b0dcc, type: 2}
+    destroyAbleA: 0
+    destroyAbleB: 1
+    cardPrefab: {fileID: 8205437737186274889, guid: 7f2050e39d4320242842bff9c31df2e7, type: 3}
     mutationCards: []

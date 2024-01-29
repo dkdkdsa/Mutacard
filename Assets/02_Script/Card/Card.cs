@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -62,11 +63,19 @@ public abstract class Card : MonoBehaviour
         {
 
             if (Time.timeScale == 0) return;
-            transform.position = MousePos();
+
+            var pos = MousePos();
+
+            transform.position = pos;
+
+        }
+        else
+        {
+
+            group.sortingOrder = (int)(transform.position.y * 10);
 
         }
 
-        group.sortingOrder = (int)(transform.position.y * 10);
 
     }
 
@@ -93,6 +102,7 @@ public abstract class Card : MonoBehaviour
     {
 
         mainRanerer.material.SetFloat("_InnerOutlineFade", 1);
+       
 
     }
 
@@ -101,6 +111,7 @@ public abstract class Card : MonoBehaviour
 
 
         mainRanerer.material.SetFloat("_InnerOutlineFade", 0);
+        
 
     }
 
@@ -109,6 +120,13 @@ public abstract class Card : MonoBehaviour
 
         isMovement = true;
         col.enabled = false;
+        AudioManager.Instance.StartSfx("CardCatch");
+
+        transform.DOKill();
+
+        transform.DOScale(Vector3.one * 1.5f, 0.2f).SetEase(Ease.OutQuad);
+
+        group.sortingOrder = 1000000;
 
     }
 
@@ -118,6 +136,12 @@ public abstract class Card : MonoBehaviour
         isMovement = false;
         margeBox.CheckMarge();
         col.enabled = true;
+
+        AudioManager.Instance.StartSfx("CardPush");
+
+        transform.DOKill();
+
+        transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutQuad);
 
     }
 

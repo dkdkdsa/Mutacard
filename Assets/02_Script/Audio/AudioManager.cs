@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using FD.Dev;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -48,7 +49,20 @@ public class AudioManager : MonoBehaviour
         AudioData data = sfxClips.Find(x => x.audioName == name);
         if (ReferenceEquals(data, null)) return;
 
-        sfxSource.clip = data.audioClip;
-        sfxSource.Play();
+        var source = Instantiate(sfxSource);
+
+        source.clip = data.audioClip;
+        source.Play();
+
+        StartCoroutine(SourceDeleteCo(source));
     }
+
+    private IEnumerator SourceDeleteCo(AudioSource source)
+    {
+
+        yield return new WaitForSeconds(source.clip.length + 0.3f);
+        Destroy(source.gameObject);
+
+    }
+
 }

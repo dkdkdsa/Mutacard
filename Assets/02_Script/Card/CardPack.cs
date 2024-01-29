@@ -12,6 +12,8 @@ public class CardPack : MonoBehaviour
     private void OnMouseDown()
     {
 
+        AudioManager.Instance.StartSfx("CardPop");
+
         for(int i = 0; i < numOfCard; i++)
         {
 
