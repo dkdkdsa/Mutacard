@@ -9,6 +9,25 @@ public class CardPack : MonoBehaviour
     [SerializeField] private List<Card> includeCards;
     [SerializeField] private int numOfCard;
 
+    private void Start()
+    {
+        TimerManager.Instance.OnTimeOutEvent += HandleTimeOut;
+    }
+
+    private void HandleTimeOut(float obj)
+    {
+
+        Destroy(gameObject);
+
+    }
+
+    private void OnDestroy()
+    {
+
+        TimerManager.Instance.OnTimeOutEvent -= HandleTimeOut;
+
+    }
+
     private void OnMouseDown()
     {
 

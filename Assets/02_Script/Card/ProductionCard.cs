@@ -6,7 +6,7 @@ using UnityEngine;
 public class ProductionCard : Card
 {
 
-    private void Start()
+    protected override void Start()
     {
 
         if(GameModManager.Instance.cMod == GameMods.Score)

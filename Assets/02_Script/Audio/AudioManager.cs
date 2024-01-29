@@ -61,6 +61,9 @@ public class AudioManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(source.clip.length + 0.3f);
+
+        if (source == null) yield break;
+
         Destroy(source.gameObject);
 
     }

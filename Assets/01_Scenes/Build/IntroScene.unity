@@ -19401,7 +19401,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 346369685}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024471138}
+        m_TargetAssemblyTypeName: IntroSceneUIController, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TimeMode
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &346369685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96988,7 +97000,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1827572590}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024471138}
+        m_TargetAssemblyTypeName: IntroSceneUIController, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ScoreMode
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1827572590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104936,7 +104960,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1996028657}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024471138}
+        m_TargetAssemblyTypeName: IntroSceneUIController, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: InfMode
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1996028657
 MonoBehaviour:
   m_ObjectHideFlags: 0

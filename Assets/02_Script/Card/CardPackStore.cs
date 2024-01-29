@@ -26,7 +26,7 @@ public class CardPackStore : MonoBehaviour
     private void NewCard(GameObject obj)
     {
 
-        Vector3 end = Random.insideUnitCircle * (Random.value + 1.5f);
+        Vector3 end = Random.insideUnitCircle * (10);
         end.z = 0;
 
         Sequence seq = DOTween.Sequence();

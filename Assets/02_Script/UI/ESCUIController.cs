@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ESCUIController : MonoBehaviour
@@ -145,10 +146,12 @@ public class ESCUIController : MonoBehaviour
     {
         if(!isEsc && Input.GetKeyDown(KeyCode.Escape))
         {
+            Time.timeScale = 0;
             ShowESC();
         }
         else if(isEsc && Input.GetKeyDown(KeyCode.Escape))
         {
+
             Continue();
         }
     }
@@ -163,13 +166,13 @@ public class ESCUIController : MonoBehaviour
     {
         if(value)
         {
-            blackPanel.DOFade(0.5f, 0.3f);
-            pause.DOFade(1, 0.3f);
+            blackPanel.DOFade(0.5f, 0.3f).SetUpdate(true);
+            pause.DOFade(1, 0.3f).SetUpdate(true);
         }
         else
         {
-            blackPanel.DOFade(0, 0.3f);
-            pause.DOFade(0, 0.3f);
+            blackPanel.DOFade(0, 0.3f).SetUpdate(true);
+            pause.DOFade(0, 0.3f).SetUpdate(true);
         }
     }
 
@@ -180,6 +183,9 @@ public class ESCUIController : MonoBehaviour
 
         NoMainMenu();
         NoExit();
+
+        Time.timeScale = 1;
+
     }
 
     #region MainMenuButton
@@ -191,11 +197,17 @@ public class ESCUIController : MonoBehaviour
 
     public void NoMainMenu()
     {
+
         mainMenuUIController.Release();
+
     }
+
     public void YesMainMenu()
     {
-        Debug.Log("메인 메뉴로 가기!");
+
+        SceneManager.LoadScene("IntroScene");
+        Time.timeScale = 1;
+
     }
 
     #endregion
@@ -209,6 +221,7 @@ public class ESCUIController : MonoBehaviour
     public void NoExit()
     {
         exitUIController.Release();
+
     }
 
     public void YesExit()

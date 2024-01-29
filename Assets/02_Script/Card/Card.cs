@@ -46,6 +46,22 @@ public abstract class Card : MonoBehaviour
 
         LanguageManager.OnLanguageChangeEvent += HandleLanguageChange;
 
+
+
+    }
+
+    protected virtual void Start()
+    {
+
+        TimerManager.Instance.OnTimeOutEvent += HandleTimeOut;
+
+    }
+
+    private void HandleTimeOut(float obj)
+    {
+
+        Destroy(gameObject);
+
     }
 
     private void HandleLanguageChange()
@@ -95,6 +111,7 @@ public abstract class Card : MonoBehaviour
     {
 
         LanguageManager.OnLanguageChangeEvent -= HandleLanguageChange;
+        TimerManager.Instance.OnTimeOutEvent -= HandleTimeOut;
 
     }
 
