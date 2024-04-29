@@ -1,10 +1,3 @@
-# Mutacard
-
-![image](https://github.com/dkdkdsa/Mutacard/assets/98935315/cd7d5bb6-8915-4bfc-80e3-728c212feed0)
-
-ScoreSpace Jam #28
-
-itch.io : https://aaing.itch.io/mutacard
 ## Itch.io 2024 ScoreSpace Jam
 Itch.io 2024 ScoreSpace Jam 177팅 중 16등 & 그래픽 점수 2위 <br>
 
